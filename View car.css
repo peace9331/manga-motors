@@ -1,0 +1,50 @@
+h1{
+      text-align: center;
+      color: wheat;
+}
+body{
+      color: gray;
+}
+.floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      color: white;
+      font-size: 26px;
+      text-align: center;
+      line-height: 55px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.3s;
+      animation: pulse 2.5s infinite ease-in-out, bounce 3s infinite ease-in-out;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.15);
+      animation: none;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+
+    .float-btn.whatsapp { background: #25D366; }
+    .float-btn.instagram { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF); }
+    .float-btn.email { background: #0072c6; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
